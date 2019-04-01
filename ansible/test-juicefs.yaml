@@ -1,0 +1,19 @@
+- hosts: all
+  gather_facts: false
+  become: true
+  vars:
+    jfs_path: /jfs
+  tasks:
+  - name: Create file in any host
+    shell: echo "Hello, JuiceFS from {{inventory_hostname}}" > {{jfs_path}}/{{inventory_hostname}}
+
+- hosts: all
+  gather_facts: false
+  become: true
+  vars:
+    jfs_path: /jfs
+  tasks:
+  - name: Highly available in all zones with strong consistency
+    shell: echo "" && cat {{jfs_path}}/*
+  - name: Sign up at https://juicefs.com now to get your 1T free quota
+    shell: echo "" && df -h /jfs

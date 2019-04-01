@@ -1,0 +1,6 @@
+.terraform
+*.tfstate
+.terraform.*
+*.backup
+*.tfvars
+ansible/hosts

@@ -1,0 +1,12 @@
+# Run it twice to verify idempotence
+- hosts: all
+  gather_facts: false
+  become: true
+  roles:
+  - roles/juicefs-mount
+- hosts: all
+  gather_facts: false
+  become: true
+  roles:
+  - roles/juicefs-mount
+- import_playbook: test-juicefs.yaml
