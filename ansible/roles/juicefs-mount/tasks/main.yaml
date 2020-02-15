@@ -8,7 +8,7 @@
     dest: "{{jfs_bin}}"
 
 - name: Get authenticated with juicefs meta server
-  command: "{{jfs_bin}} auth {{jfs_name}} --token {{jfs_token}} --accesskey {{bucket_accesskey}} --secretkey {{bucket_secretkey}} --bucket {{bucket_name}}"
+  command: "{{jfs_bin}} auth {{jfs_name}} --token={{jfs_token}} --accesskey={{bucket_accesskey}} --secretkey={{bucket_secretkey}} --bucket={{bucket_name}}"
   args:
     creates: /root/.juicefs/{{jfs_name}}.conf
 

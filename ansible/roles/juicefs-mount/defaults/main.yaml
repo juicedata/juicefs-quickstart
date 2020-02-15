@@ -1,4 +1,4 @@
-jfs_bin: /usr/local/bin
+jfs_bin: /usr/local/bin/juicefs
 jfs_path: /jfs
 bucket_name: juicefs-{{jfs_name}}
 bucket_accesskey: '""'

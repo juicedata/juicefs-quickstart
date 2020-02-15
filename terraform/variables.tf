@@ -1,23 +1,11 @@
 variable "juicefs_name" {}
 
-variable "s3_bucket_name" {
-  default = "juicefs-quickstart"
-}
-
-variable "default_name" {
-  default = "juicefs-quickstart"
-}
-
-variable "default_description" {
+variable "description" {
   default = "JuiceFS quick start"
 }
 
 variable "aws_region" {
   default = "ap-northeast-1"
-}
-
-variable "aws_availability_zone" {
-  default = "ap-northeast-1a"
 }
 
 variable "ssh_user" {
@@ -29,5 +17,5 @@ variable "ssh_public_key" {
 }
 
 variable "checkip_url" {
-  default = "http://ipv4.icanhazip.com"
+  default = "http://ifconfig.co"
 }
